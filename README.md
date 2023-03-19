@@ -1,7 +1,7 @@
 # ChatGPT on CLI using Java
 
 ## Overview
-A simple Java program to chat with ChatGPT from the CLI using the [ChatGPT API Free project](https://github.com/ayaka14732/ChatGPTAPIFree).
+A simple Java program to chat with ChatGPT from the CLI using the [ChatGPT API Free](https://github.com/ayaka14732/ChatGPTAPIFree) project.
 
 ## Requirements
 To run the program, the following should be first installed:
