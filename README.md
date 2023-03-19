@@ -24,6 +24,9 @@ OPEN_API_KEY = YOUR_API_KEY
 and replace `YOUR_API_KEY` with your own OpenAI API Key.
 6. Run the program.
 
+## Future Implementations
+* Implement Picocli
+
 ## References
 * [ChatGPT API Free](https://github.com/ayaka14732/ChatGPTAPIFree)
 * [OpenAI Official Documentation](https://platform.openai.com/docs/api-reference)
