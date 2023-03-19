@@ -1,7 +1,7 @@
 # ChatGPT on CLI using Java
 
 ## Overview
-A simple Java program to chat with ChatGPT from the CLI using the [ChatGPT API Free project](https://github.com/ayaka14732/ChatGPTAPIFree).
+A simple Java program to chat with ChatGPT from the CLI using the [ChatGPT API Free](https://github.com/ayaka14732/ChatGPTAPIFree) project.
 
 ## Requirements
 To run the program, the following should be first installed:
@@ -10,7 +10,9 @@ To run the program, the following should be first installed:
 * [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/download/#section=windows)
 
 ## Get an OpenAI API Key
-To get an OpenAI API Key, you need to first sign up for an OpenAI account. Once you have an OpenAI account, you can create an OpenAI API Key [here](https://platform.openai.com/account/api-keys).
+To get an OpenAI API Key, you need to first sign up for an OpenAI account. You can sign up [here](https://platform.openai.com/signup).
+
+Once you have an OpenAI account, you can create an OpenAI API Key [here](https://platform.openai.com/account/api-keys).
 
 ## Installation Guide
 1. Install the requirements specified above.
