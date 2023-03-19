@@ -6,27 +6,40 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Scanner;
+
+import com.breadmyburn.model.ChatGptMessages;
+import com.breadmyburn.model.ChatGptRequest;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.github.cdimascio.dotenv.Dotenv;
 
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
         Dotenv dotenv = Dotenv.load();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a message: ");
-        String message = scanner.nextLine();
+        System.out.println("Enter a prompt: ");
+        String prompt = scanner.nextLine();
 
-        String input = """
-                {
-                  "model": "gpt-3.5-turbo",
-                  "messages": [{"role": "user", "content": "%s"}]
-                }
-                """.formatted(message);
+        ObjectMapper objectMapper = new ObjectMapper();
+        ChatGptMessages chatGptMessages = new ChatGptMessages("user", prompt);
+        String messages = objectMapper.writeValueAsString((chatGptMessages));
+        ChatGptRequest chatGptRequest = new ChatGptRequest( "gpt-3.5-turbo", "[" + messages + "]");
+        String input = objectMapper.writeValueAsString(chatGptRequest);
+
+        /*
+        The output of the string `input` contains several "\" and two quotation marks in the
+        message portion of `ChatGptRequest` which makes the input not formatted correctly.
+
+        The process below fixes the input and removes these additional characters.
+        */
+        String firstFix = input.replace("\\","");
+        String secondFix = firstFix.replace("\"[","[");
+        String inputFixed = secondFix.replace("]\"","]");
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://chatgpt-api.shn.hk/v1/"))
                 .header("Content-Type", "application/json")
-                .header("Authorization", "Bearer " + dotenv.get("OPEN_API_KEY"))
-                .POST(HttpRequest.BodyPublishers.ofString(input))
+                .header("Authorization", "Bearer " + dotenv.get("OPENAI_API_KEY"))
+                .POST(HttpRequest.BodyPublishers.ofString(inputFixed))
                 .build();
 
         HttpClient httpClient = HttpClient.newHttpClient();
@@ -34,6 +47,5 @@ public class Main {
 
         System.out.println(response.statusCode());
         System.out.println(response.body());
-
     }
 }
