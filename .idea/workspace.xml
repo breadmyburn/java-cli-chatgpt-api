@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b40a81e1-8f5f-4781-b3f1-5318f3f89d79" name="Changes" comment="refactor: response as a java record">
+    <list default="true" id="b40a81e1-8f5f-4781-b3f1-5318f3f89d79" name="Changes" comment="fix: modify datatypes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/breadmyburn/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/breadmyburn/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/breadmyburn/model/ChatGptResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/breadmyburn/model/ChatGptResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +33,7 @@
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="e87bba99-71e9-44c6-bf9b-393c97e5c42c" />
+        <option name="accountId" value="79c5ae26-06ca-4b63-9eb2-b0baa59cd24c" />
         <option name="url" value="https://github.com/breadmyburn/java-cli-chatgpt-api.git" />
       </UrlAndAccount>
     </option>
@@ -81,6 +82,7 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\java-cli-chatgpt-api" />
       <recent name="C:\Users\user\IdeaProjects\java-cli-chatgpt-api" />
     </key>
   </component>
@@ -150,11 +152,41 @@
       <option name="project" value="LOCAL" />
       <updated>1679244000503</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix: modify datatypes">
+      <created>1679296513870</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1679296513870</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="build: change to Java 17" />
@@ -164,6 +196,7 @@
     <MESSAGE value="fix: re-add main.java&#10;&#10;The error occurred due to folder structure change." />
     <MESSAGE value="refactor: messages and requests as java records" />
     <MESSAGE value="refactor: response as a java record" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: response as a java record" />
+    <MESSAGE value="fix: modify datatypes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: modify datatypes" />
   </component>
 </project>

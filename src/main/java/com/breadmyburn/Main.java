@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 import com.breadmyburn.model.ChatGptMessages;
 import com.breadmyburn.model.ChatGptRequest;
+import com.breadmyburn.model.ChatGptResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.github.cdimascio.dotenv.Dotenv;
 
@@ -45,7 +46,13 @@ public class Main {
         HttpClient httpClient = HttpClient.newHttpClient();
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
 
-        System.out.println(response.statusCode());
-        System.out.println(response.body());
+        if(response.statusCode() == 200) {
+            ChatGptResponse chatGptResponse = objectMapper.readValue(response.body(), ChatGptResponse.class);
+            System.out.println(chatGptResponse.getChoices()[0].message().content());
+
+        } else {
+            System.out.println(response.statusCode());
+            System.out.println(response.body());
+        }
     }
 }
