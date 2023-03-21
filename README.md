@@ -25,7 +25,7 @@ Once you have an OpenAI account, you can create an OpenAI API Key [here](https:/
 4. Open this project in IntelliJ IDEA Ultimate.
 5. Create a new file called `.env`. Enter the line below in the `.env` file:
 ```
-OPEN_API_KEY = YOUR_API_KEY
+OPENAI_API_KEY = YOUR_API_KEY
 ```
 and replace `YOUR_API_KEY` with your own OpenAI API Key.
 6. Run the program.
